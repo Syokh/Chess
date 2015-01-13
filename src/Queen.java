@@ -24,14 +24,18 @@ public class Queen extends Figures {
                 ay += 1;
             }
             if (ax == ay) {
-                T = checkMoves(hashMap, x1, y1);
                 T = checkBishop(hashMap, x1, y1);
+                if (T == true){
+                    T = checkMoves(hashMap, x1, y1);
+                }
             }
 
             if (this.x == x1 || this.y == y1) {
                 T = true;
-                T = checkMoves(hashMap, x1, y1);
                 T = checkRook(hashMap, x1, y1);
+                if (T == true){
+                    T = checkMoves(hashMap, x1, y1);
+                }
             }
         }
         return T;

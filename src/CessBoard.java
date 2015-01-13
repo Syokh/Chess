@@ -147,15 +147,18 @@ public class CessBoard extends JFrame implements MouseMotionListener, MouseListe
         int x1 = e.getX() / 64;
         int y1 = e.getY() / 64;
         boolean T = false;
-        Figures checkWhite = null;
 
         if (color.equals("white") && Flag2 == true) {
             T = chess.gamePieces(chess.getHashMap(), nameFi, color, x1, y1);
-            checkWhite = chess.removeFigure(chess.getHashMap(), color, x1, y1);
+            if(T){
+               chess.removeFigure(chess.getHashMap(), color, x1, y1);
+            }
             Flag = false;
         } else if (color.equals("black") && Flag2 == false) {
             T = chess.gamePieces(chess.getHashMap(), nameFi, color, x1, y1);
-            checkWhite = chess.removeFigure(chess.getHashMap(), color, x1, y1);
+            if (T){
+               chess.removeFigure(chess.getHashMap(), color, x1, y1);
+            }
             Flag = true;
         }
 
@@ -165,7 +168,6 @@ public class CessBoard extends JFrame implements MouseMotionListener, MouseListe
             Component c = chessBoard.findComponentAt(e.getX(), e.getY());
 
             if (c instanceof JLabel) {
-
                 Container parent = c.getParent();
                 parent.remove(c);
                 parent.validate();

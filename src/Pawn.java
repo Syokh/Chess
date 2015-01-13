@@ -29,7 +29,7 @@ public class Pawn extends Figures {
                 }
                 int ax1 = this.x + 1;
                 int ax2 = this.x - 1;
-                if (ax1 == x1 && y1 == ay2) {
+                if (ax1 == x1 && y1 == ay2 ) {
                     T =  checkPawn(hashMap, x1, y1);
                 }
                 if (ax2 == x1 && y1 == ay2) {

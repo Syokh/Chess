@@ -9,8 +9,10 @@ public class Rook extends Figures {
         if (this.x >= 0 && this.x < 8 && this.y >= 0 && this.y < 8 && x1 >= 0 && x1 < 8 && y1 >= 0 && y1 < 8) {
             if (this.x == x1 || y == y1) {
                 T = true;
-                T = checkMoves(hashMap, x1, y1);
                 T = checkRook(hashMap, x1, y1);
+                if (T == true){
+                   T = checkMoves(hashMap, x1, y1);
+                }
             }
         }
         return T;
