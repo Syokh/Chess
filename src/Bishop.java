@@ -54,3 +54,6 @@ public class Bishop extends Figures {
 
     public void setY(int y) { this.y = y; }
 }
+/**
+ * Comment in Master
+ */
