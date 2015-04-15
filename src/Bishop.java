@@ -57,3 +57,4 @@ public class Bishop extends Figures {
 /**
  * Comment in Master
  */
+// New comment in TestBranch3
