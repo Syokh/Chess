@@ -52,7 +52,7 @@ public class Bishop extends Figures {
 
     public int getY() { return y; }
 
-    public void setY(int y) { this.y = y; }
+    public void setY(int y)/***/ { this.y = y; }
 }
 /**
  * Comment in Master
